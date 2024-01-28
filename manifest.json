@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "version": "1.0",
-  "name": "SearXNG (priv.au)",
+  "name": "SearXNG (search.im-in.space)",
   "short_name": "SearXNG",
-  "author": "zeraye",
+  "author": "thedoggybrad",
   "description": "Add SearXNG (search.im-in.space instance to search engine list.",
   "icons": {
     "16": "images/searxng-wordmark.svg",
