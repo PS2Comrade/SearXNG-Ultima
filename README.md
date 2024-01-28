@@ -1,6 +1,7 @@
-# SearXNG (priv.au)
+# SearXNG (search.im-in.spac)
 
-Analysing chess.com games at lichess.org for free.
+Add SearXNG to firefox search engine list (search.im-in.space hosting - UNAFFILIATED). 
+**I AM UNAFFILIATED WITH THIS INSTANCE. JUST CREATED AN ADD-ON FOR THEM.
 
 ![Addon logo](images/searxng.svg)
 
