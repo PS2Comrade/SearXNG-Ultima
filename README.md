@@ -8,4 +8,4 @@ Add SearXNG to firefox search engine list (search.im-in.space instance - UNAFFIL
 
 ## Addon
 
-Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/).
+Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/searxng-search-im-in-space/).
