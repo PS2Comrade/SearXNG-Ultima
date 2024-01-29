@@ -1,6 +1,6 @@
-# SearXNG (search.im-in.spac)
+# SearXNG (search.im-in.space)
 
-Add SearXNG to firefox search engine list (search.im-in.space hosting - UNAFFILIATED). 
+Add SearXNG to firefox search engine list (search.im-in.space instance - UNAFFILIATED). 
 <br>
 **I AM UNAFFILIATED WITH THIS INSTANCE. JUST CREATED AN ADD-ON FOR THEM.
 
