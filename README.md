@@ -1,6 +1,6 @@
 # SearXNG (search.im-in.space)
 
-Add SearXNG to firefox search engine list (search.im-in.space instance - UNAFFILIATED). 
+Add SearXNG to firefox search engine list (search.demoniak.ch instance - UNAFFILIATED). 
 <br>
 **I AM UNAFFILIATED WITH THIS INSTANCE. JUST CREATED AN ADD-ON FOR THEM.
 
@@ -8,4 +8,4 @@ Add SearXNG to firefox search engine list (search.im-in.space instance - UNAFFIL
 
 ## Addon
 
-Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/searxng-search-im-in-space/).
+Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/searxng-search-demoniak-ch/).
