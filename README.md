@@ -1,4 +1,4 @@
-# SearXNG (search.im-in.space)
+# SearXNG (search.demoniak.ch)
 
 Add SearXNG to firefox search engine list (search.demoniak.ch instance - UNAFFILIATED). 
 <br>
