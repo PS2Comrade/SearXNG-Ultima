@@ -3,13 +3,28 @@
   <head>
     <style>
       body { font-family: Arial, sans-serif; }
-      #instance-input { width: 100%; margin-bottom: 10px; }
+      input { width: 100%; padding: 8px; margin-top: 10px; }
+      button { padding: 10px; margin-top: 10px; }
     </style>
   </head>
   <body>
     <h2>Set Default Searx Instance</h2>
-    <input type="text" id="instance-input" placeholder="https://searxng.ch/">
-    <button id="save-button">Save</button>
-    <script src="options.js"></script>
+    <input type="text" id="instanceInput" placeholder="https://your-searx-instance.com" />
+    <button id="saveButton">Save Instance</button>
+
+    <script>
+      // Load the stored instance when the page loads
+      browser.storage.sync.get('searxInstance', function(data) {
+        document.getElementById('instanceInput').value = data.searxInstance || '';
+      });
+
+      // Save the instance when clicking the "Save" button
+      document.getElementById('saveButton').addEventListener('click', function() {
+        let instance = document.getElementById('instanceInput').value;
+        browser.storage.sync.set({ searxInstance: instance }, function() {
+          alert('Searx instance saved!');
+        });
+      });
+    </script>
   </body>
 </html>
