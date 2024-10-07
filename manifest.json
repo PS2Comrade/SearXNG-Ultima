@@ -1,14 +1,28 @@
 {
   "manifest_version": 2,
-  "version": "0.2",
   "name": "SearXNG",
-  "short_name": "SearXNG",
-  "author": "ComradePS2",
-  "description": "Add SearXNG (https://searxng.ch/ for now) to search engine list.",
-  "permissions": ["activeTab", "storage"],
+  "version": "0.2",
+  "description": "A Firefox addon to search with SearXNG and change the default instance.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/"
+  ],
   "browser_action": {
     "default_popup": "popup.html",
-  "icons": {
+   "icons": {
     "16": "images/searxng-wordmark.svg",
     "128": "images/searxng-wordmark.svg"
   }
+
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+  
