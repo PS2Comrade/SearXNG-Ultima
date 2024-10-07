@@ -5,6 +5,9 @@
   "short_name": "SearXNG",
   "author": "ComradePS2",
   "description": "Add SearXNG (https://searxng.ch/ for now) to search engine list.",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+   "scripts": ["background.js"]
   "icons": {
     "16": "images/searxng-wordmark.svg",
     "128": "images/searxng-wordmark.svg"
