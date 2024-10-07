@@ -6,21 +6,9 @@
   "author": "ComradePS2",
   "description": "Add SearXNG (https://searxng.ch/ for now) to search engine list.",
   "permissions": ["activeTab", "storage"],
-  "background": {
-   "scripts": ["background.js"]
+  "browser_action": {
+    "default_popup": "popup.html",
   "icons": {
     "16": "images/searxng-wordmark.svg",
     "128": "images/searxng-wordmark.svg"
-  },
-  "chrome_settings_overrides": {
-    "search_provider": {
-      "name": "SearXNG",
-      "keyword": "searx, searxng",
-      "search_url": "https://searxng.ch//search?q={searchTerms}",
-      "favicon_url": "images/searxng-wordmark.svg",
-      "suggest_url": "https://searxng.ch//autocompleter?q={searchTerms}",
-      "encoding": "UTF-8",
-      "is_default": true
-    }
   }
-}
