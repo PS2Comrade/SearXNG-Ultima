@@ -18,12 +18,27 @@
         document.getElementById('instanceInput').value = data.searxInstance || '';
       });
 
-      // Save the instance when clicking the "Save" button
+      // Save the instance and update the default search engine
       document.getElementById('saveButton').addEventListener('click', function() {
         let instance = document.getElementById('instanceInput').value;
-        browser.storage.sync.set({ searxInstance: instance }, function() {
-          alert('Searx instance saved!');
-        });
+        if (instance) {
+          browser.storage.sync.set({ searxInstance: instance }, function() {
+            browser.search.get().then((engines) => {
+              // Create a search engine with the Searx instance URL
+              let searxSearchEngine = {
+                name: "Searx",
+                search_url: `${instance}/search?q=%s`
+              };
+
+              // Add the new Searx search engine and set it as default
+              browser.search.addEngineWithDetails(searxSearchEngine.name, {
+                template: searxSearchEngine.search_url
+              }).then(() => {
+                alert('Searx instance set as default search engine!');
+              });
+            });
+          });
+        }
       });
     </script>
   </body>
