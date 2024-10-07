@@ -2,27 +2,29 @@
   "manifest_version": 2,
   "name": "SearXNG",
   "version": "0.2",
-  "description": "A Firefox addon to search with SearXNG and change the default instance.",
+  "description": "A Firefox addon to search with Searx and change the default instance.",
   "permissions": [
     "storage",
     "activeTab",
     "webRequest",
     "webRequestBlocking",
-    "https://*/"
+    "*://*/search*"
   ],
-  "browser_action": {
-    "default_popup": "popup.html",
-   "icons": {
-    "16": "images/searxng-wordmark.svg",
-    "128": "images/searxng-wordmark.svg"
-  }
-
-  },
   "background": {
     "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    }
   },
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true
   }
+}
+   "icons": {
+    "16": "images/searxng-wordmark.svg",
+    "128": "images/searxng-wordmark.svg"
+  }
+
   
