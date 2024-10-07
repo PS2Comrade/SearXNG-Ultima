@@ -1,7 +1,7 @@
 // Load the saved instance URL when the popup opens
 document.addEventListener('DOMContentLoaded', function() {
     browser.storage.local.get('searxInstance').then(result => {
-        document.getElementById('instance-url').value = result.searxInstance || 'https://your-default-searxng-instance';
+        document.getElementById('instance-url').value = result.searxInstance || 'https://searxng.ch';
     });
 });
 
