@@ -3,12 +3,15 @@
   <head>
     <style>
       body { font-family: Arial, sans-serif; }
-      #search-box { width: 100%; margin-bottom: 10px; }
+      button { margin: 10px; padding: 10px; font-size: 14px; }
     </style>
   </head>
   <body>
-    <input type="text" id="search-box" placeholder="Enter your query...">
-    <button id="search-button">Search</button>
-    <script src="popup.js"></script>
+    <button id="optionsButton">Set Searx Instance</button>
+    <script>
+      document.getElementById('optionsButton').addEventListener('click', function() {
+        browser.runtime.openOptionsPage();
+      });
+    </script>
   </body>
 </html>
