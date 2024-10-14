@@ -23,5 +23,9 @@
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"]
+  },
+  "storage": {
+    "name": "local",
+    "description": "Store search provider settings"
   }
 }
