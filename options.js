@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchUrl = searchUrlInput.value;
     const suggestUrl = suggestUrlInput.value;
 
-    // Store the updated values in browser storage
+    // Update the search provider settings
     browser.storage.local.set({
       searchUrl: searchUrl,
       suggestUrl: suggestUrl
     });
 
-    // Update the search provider settings
+    // Send a message to the background script to update the search provider
     browser.runtime.sendMessage({ action: "updateSearchProvider" });
   });
 });
