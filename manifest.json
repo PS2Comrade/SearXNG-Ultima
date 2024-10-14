@@ -27,5 +27,9 @@
   "storage": {
     "name": "local",
     "description": "Store search provider settings"
+  },
+  "storage": {
+    "name": "local",
+    "description": "Store search provider settings"
   }
 }
