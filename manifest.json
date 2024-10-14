@@ -13,9 +13,9 @@
     "search_provider": {
       "name": "SearXNG",
       "keyword": "searx, searxng",
-      "search_url": "",
+      "search_url": "https://search.demoniak.ch/search?q={searchTerms}",
       "favicon_url": "images/searxng-wordmark.svg",
-      "suggest_url": "",
+      "suggest_url": "https://search.demoniak.ch/autocompleter?q={searchTerms}",
       "encoding": "UTF-8",
       "is_default": true
     }
