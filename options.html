@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>SearXNG Options</title>
     <style>
-      body { font-family: Arial, sans-serif; }
-      input { width: 100%; padding: 8px; margin-top: 10px; }
-      button { padding: 10px; margin-top: 10px; }
+      body {
+        width: 400px;
+        font-family: Arial, sans-serif;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
     </style>
   </head>
   <body>
-    <h2>Set Default Searx Instance</h2>
-    <input type="text" id="instanceInput" placeholder="https://your-searx-instance.com" />
-    <button id="saveButton">Save Instance</button>
-
-    <script>
-      // Load the stored instance when the page loads
-      browser.storage.sync.get('searxInstance', function(data) {
-        document.getElementById('instanceInput').value = data.searxInstance || '';
-      });
-
-      // Save the instance and update the default search engine
-      document.getElementById('saveButton').addEventListener('click', function() {
-        let instance = document.getElementById('instanceInput').value;
-        if (instance) {
-          browser.storage.sync.set({ searxInstance: instance }, function() {
-            browser.search.get().then((engines) => {
-              // Create a search engine with the Searx instance URL
-              let searxSearchEngine = {
-                name: "Searx",
-                search_url: `${instance}/search?q=%s`
-              };
-
-              // Add the new Searx search engine and set it as default
-              browser.search.addEngineWithDetails(searxSearchEngine.name, {
-                template: searxSearchEngine.search_url
-              }).then(() => {
-                alert('Searx instance set as default search engine!');
-              });
-            });
-          });
-        }
-      });
-    </script>
+    <h1>SearXNG Options</h1>
+    <form>
+      <label for="search-url">Search URL:</label>
+      <input type="text" id="search-url" value="https://search.demoniak.ch/search?q={searchTerms}">
+      <br>
+      <label for="suggest-url">Suggest URL:</label>
+      <input type="text" id="suggest-url" value="https://search.demoniak.ch/autocompleter?q={searchTerms}">
+      <br>
+      <button type="submit">Save Changes</button>
+    </form>
+    <script src="options.js"></script>
   </body>
 </html>
