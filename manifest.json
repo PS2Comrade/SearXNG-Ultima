@@ -3,8 +3,8 @@
   "version": "1.0",
   "name": "SearXNG (search.demoniak.ch)",
   "short_name": "SearXNG",
-  "author": "ComradePS2",
-  "description": "Add SearXNG to search engine list.",
+  "author": "thedoggybrad",
+  "description": "Add SearXNG (search.demoniak.ch instance) to search engine list.",
   "icons": {
     "16": "images/searxng-wordmark.svg",
     "128": "images/searxng-wordmark.svg"
@@ -13,9 +13,9 @@
     "search_provider": {
       "name": "SearXNG",
       "keyword": "searx, searxng",
-      "search_url": "https://search.demoniak.ch/search?q={searchTerms}",
+      "search_url": "",
       "favicon_url": "images/searxng-wordmark.svg",
-      "suggest_url": "https://search.demoniak.ch/autocompleter?q={searchTerms}",
+      "suggest_url": "",
       "encoding": "UTF-8",
       "is_default": true
     }
@@ -23,7 +23,7 @@
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"]
-   },
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
