@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchUrl = searchUrlInput.value;
     const suggestUrl = suggestUrlInput.value;
 
-    // Update the manifest.json file
-    browser.runtime.sendMessage({ action: "updateManifest", searchUrl, suggestUrl });
+    // Store the updated values in browser storage
+    browser.storage.local.set({
+      searchUrl: searchUrl,
+      suggestUrl: suggestUrl
+    });
+
+    // Update the search provider settings
+    browser.runtime.sendMessage({ action: "updateSearchProvider" });
   });
 });
